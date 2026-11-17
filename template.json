@@ -1,0 +1,2215 @@
+{
+  "id": "template-holistico-0003",
+  "name": "Holístico 0003 · Floresta",
+  "version": "1.0.0",
+  "description": "Verde profundo texturizado, ramos de folhas e flores em dourado, lua e estrelas, ilustração na abertura. Para baralho cigano, tarot e bruxaria natural.",
+  "modules": [
+    "sales:CreateProduct"
+  ],
+  "groups": [
+    "Topo",
+    "Loja",
+    "Conteúdo",
+    "Contato"
+  ],
+  "theme": {
+    "palettes": [
+      {
+        "id": "floresta",
+        "label": "Floresta",
+        "primary": "#1E3124",
+        "deep": "#15241A",
+        "nightSoft": "#2C4533",
+        "soft": "#F3EBDD",
+        "light": "#FAF6EE",
+        "accent": "#B49A60",
+        "accentLight": "#D9C79B",
+        "accentDark": "#8A7340",
+        "olive": "#6D7659",
+        "ink": "#352B26",
+        "muted": "#5C4F47",
+        "alert": "#C0562D",
+        "texture": true
+      },
+      {
+        "id": "marrom",
+        "label": "Marrom-tinta",
+        "primary": "#352B26",
+        "deep": "#241D19",
+        "nightSoft": "#4A3D36",
+        "soft": "#F3EBDD",
+        "light": "#FAF6EE",
+        "accent": "#B49A60",
+        "accentLight": "#D9C79B",
+        "accentDark": "#8A7340",
+        "olive": "#6D7659",
+        "ink": "#352B26",
+        "muted": "#5C4F47",
+        "alert": "#C0562D",
+        "texture": true
+      },
+      {
+        "id": "verde",
+        "label": "Verde liso",
+        "primary": "#20382C",
+        "deep": "#172A21",
+        "nightSoft": "#2C4A3B",
+        "soft": "#F3EBDD",
+        "light": "#FAF6EE",
+        "accent": "#B49A60",
+        "accentLight": "#D9C79B",
+        "accentDark": "#8A7340",
+        "olive": "#6D7659",
+        "ink": "#352B26",
+        "muted": "#5C4F47",
+        "alert": "#C0562D",
+        "texture": false
+      },
+      {
+        "id": "noite",
+        "label": "Noite e vinho",
+        "primary": "#2A1F2D",
+        "deep": "#1C141E",
+        "nightSoft": "#3E2E42",
+        "soft": "#F4ECE6",
+        "light": "#FBF7F3",
+        "accent": "#C3A06A",
+        "accentLight": "#E2CC9F",
+        "accentDark": "#94763F",
+        "olive": "#7A5468",
+        "ink": "#33262F",
+        "muted": "#5E4C57",
+        "alert": "#B4483A",
+        "texture": true
+      }
+    ],
+    "fonts": [
+      {
+        "id": "classica",
+        "label": "Clássica",
+        "display": "'Cormorant Garamond', Georgia, serif",
+        "body": "'Josefin Sans', system-ui, sans-serif",
+        "weight": 600,
+        "ui": "Cinzel, Georgia, serif"
+      },
+      {
+        "id": "antiga",
+        "label": "Antiga",
+        "display": "'IM Fell DW Pica', Georgia, serif",
+        "body": "'Josefin Sans', system-ui, sans-serif",
+        "weight": 400,
+        "ui": "Cinzel, Georgia, serif"
+      }
+    ],
+    "chartNames": [
+      {
+        "id": "mapa-astral",
+        "label": "Mapa astral",
+        "singular": "mapa astral",
+        "plural": "mapas astrais",
+        "short": "mapa",
+        "shortPlural": "mapas",
+        "feminine": false,
+        "sample": "/mapa-astral",
+        "charts": "/minha-conta/mapas-astrais"
+      },
+      {
+        "id": "roda-cigana",
+        "label": "Roda Cigana",
+        "singular": "Roda Cigana",
+        "plural": "Rodas Ciganas",
+        "short": "roda",
+        "shortPlural": "rodas",
+        "feminine": true,
+        "sample": "/roda-cigana",
+        "charts": "/minha-conta/rodas-ciganas"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "type": "header",
+      "label": "Cabeçalho",
+      "group": "Global",
+      "global": true,
+      "description": "Símbolo, nome, menu, conta e sacola, numa faixa escura fixa no topo. Aparece em todas as páginas.",
+      "fields": [
+        {
+          "key": "logoImage",
+          "label": "Símbolo (imagem redonda)",
+          "type": "image",
+          "optional": true,
+          "help": "Sem imagem, vale o logotipo da loja."
+        },
+        {
+          "key": "logo",
+          "label": "Nome da marca",
+          "type": "text"
+        },
+        {
+          "key": "tagline",
+          "label": "Linha abaixo do nome",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "shopLabel",
+          "label": "Nome da loja no menu",
+          "type": "text",
+          "help": "O link para a prateleira (/loja). Ex.: Loja, Leituras."
+        },
+        {
+          "key": "button",
+          "label": "Botão no menu do celular",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link",
+          "label": "Link do botão",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        }
+      ]
+    },
+    {
+      "type": "hero",
+      "label": "Abertura com arte",
+      "group": "Topo",
+      "description": "A primeira dobra, escura e texturizada: chamada, título grande, texto, dois botões, destaques e a arte ao lado.",
+      "fields": [
+        {
+          "key": "image",
+          "label": "Arte ou foto",
+          "type": "image",
+          "optional": true
+        },
+        {
+          "key": "imageAlt",
+          "label": "Descrição da imagem",
+          "type": "text",
+          "optional": true,
+          "help": "Para leitores de tela e o Google: o que aparece na imagem."
+        },
+        {
+          "key": "imageStyle",
+          "label": "Formato da arte",
+          "type": "select",
+          "options": [
+            {
+              "value": "ilustracao",
+              "label": "Ilustração fundida ao fundo (círculo esmaecido)"
+            },
+            {
+              "value": "arco",
+              "label": "Foto em arco com moldura dourada"
+            }
+          ]
+        },
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "subtitle",
+          "label": "Texto",
+          "type": "area"
+        },
+        {
+          "key": "button",
+          "label": "Botão principal",
+          "type": "text"
+        },
+        {
+          "key": "link",
+          "label": "Link do botão principal",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "button2",
+          "label": "Botão secundário",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link2",
+          "label": "Link do botão secundário",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "bullets",
+          "label": "Destaques abaixo dos botões",
+          "type": "items",
+          "min": 0,
+          "max": 4,
+          "itemTitle": "label",
+          "fields": [
+            {
+              "key": "label",
+              "label": "Texto",
+              "type": "text"
+            }
+          ],
+          "newItem": {
+            "label": "Novo destaque"
+          }
+        },
+        {
+          "key": "ornaments",
+          "label": "Ramos e flores",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Com ramos e flores"
+            },
+            {
+              "value": "nao",
+              "label": "Sem ornamentos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "intro",
+      "label": "Topo de página",
+      "group": "Topo",
+      "description": "Topo escuro das páginas internas: o caminho (Início / Página), chamada, título, texto, botões e foto em arco opcional.",
+      "fields": [
+        {
+          "key": "image",
+          "label": "Foto",
+          "type": "image",
+          "optional": true
+        },
+        {
+          "key": "imageAlt",
+          "label": "Descrição da imagem",
+          "type": "text",
+          "optional": true,
+          "help": "Para leitores de tela e o Google: o que aparece na imagem."
+        },
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "lead",
+          "label": "Texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "button",
+          "label": "Botão principal",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link",
+          "label": "Link do botão principal",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "button2",
+          "label": "Botão secundário",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link2",
+          "label": "Link do botão secundário",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "ornaments",
+          "label": "Ramos e flores",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Com ramos e flores"
+            },
+            {
+              "value": "nao",
+              "label": "Sem ornamentos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "products",
+      "label": "Vitrine da loja",
+      "group": "Loja",
+      "description": "Os produtos à venda na loja: sessões, mapas, produtos físicos ou assinaturas.",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "subtitle",
+          "label": "Texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "source",
+          "label": "Quais produtos mostrar",
+          "type": "select",
+          "options": [
+            {
+              "value": "todos",
+              "label": "Todos os produtos"
+            },
+            {
+              "value": "servicos",
+              "label": "Sessões com horário"
+            },
+            {
+              "value": "mapas",
+              "label": "Mapas"
+            },
+            {
+              "value": "produtos",
+              "label": "Produtos físicos"
+            },
+            {
+              "value": "assinaturas",
+              "label": "Assinaturas"
+            }
+          ]
+        },
+        {
+          "key": "count",
+          "label": "Quantidade",
+          "type": "select",
+          "options": [
+            {
+              "value": "3",
+              "label": "3 produtos"
+            },
+            {
+              "value": "4",
+              "label": "4 produtos"
+            },
+            {
+              "value": "6",
+              "label": "6 produtos"
+            },
+            {
+              "value": "8",
+              "label": "8 produtos"
+            }
+          ]
+        },
+        {
+          "key": "layout",
+          "label": "Formato",
+          "type": "select",
+          "options": [
+            {
+              "value": "grade",
+              "label": "Grade"
+            },
+            {
+              "value": "carrossel",
+              "label": "Carrossel (rola para o lado)"
+            }
+          ]
+        },
+        {
+          "key": "button",
+          "label": "Botão para a loja",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "divider",
+          "label": "Lua e estrelas acima do título",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Mostrar"
+            },
+            {
+              "value": "nao",
+              "label": "Esconder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sample",
+      "label": "Amostra grátis do mapa",
+      "group": "Loja",
+      "description": "Convite para a amostra grátis do mapa (com o nome escolhido em Aparência). Só aparece quando a loja oferece a amostra.",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "button",
+          "label": "Botão",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "type": "modes",
+      "label": "Modalidades",
+      "group": "Conteúdo",
+      "description": "Cartões com etiqueta, título, resumo e link, e um cartão escuro em destaque no fim.",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "subtitle",
+          "label": "Texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "items",
+          "label": "Cartões",
+          "type": "items",
+          "min": 1,
+          "max": 9,
+          "itemTitle": "title",
+          "fields": [
+            {
+              "key": "tag",
+              "label": "Etiqueta",
+              "type": "text"
+            },
+            {
+              "key": "title",
+              "label": "Título",
+              "type": "text"
+            },
+            {
+              "key": "text",
+              "label": "Resumo",
+              "type": "area"
+            },
+            {
+              "key": "linkLabel",
+              "label": "Texto do link",
+              "type": "text"
+            },
+            {
+              "key": "link",
+              "label": "Link",
+              "type": "text",
+              "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+            }
+          ],
+          "newItem": {
+            "tag": "Nova",
+            "title": "Nova modalidade",
+            "text": "Conte em poucas linhas o que é e para quem é.",
+            "linkLabel": "Saiba mais",
+            "link": "/loja"
+          }
+        },
+        {
+          "key": "featuredTag",
+          "label": "Destaque: etiqueta",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "featuredTitle",
+          "label": "Destaque: título",
+          "type": "text",
+          "optional": true,
+          "help": "Vazio: sem o cartão em destaque."
+        },
+        {
+          "key": "featuredText",
+          "label": "Destaque: texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "featuredLinkLabel",
+          "label": "Destaque: texto do link",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "featuredLink",
+          "label": "Destaque: link",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "divider",
+          "label": "Lua e estrelas acima do título",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Mostrar"
+            },
+            {
+              "value": "nao",
+              "label": "Esconder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "label": "Como funciona",
+      "group": "Conteúdo",
+      "description": "Passos numerados em círculos dourados.",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "subtitle",
+          "label": "Texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "items",
+          "label": "Passos",
+          "type": "items",
+          "min": 1,
+          "max": 4,
+          "itemTitle": "title",
+          "fields": [
+            {
+              "key": "title",
+              "label": "Título",
+              "type": "text"
+            },
+            {
+              "key": "text",
+              "label": "Texto",
+              "type": "area"
+            }
+          ],
+          "newItem": {
+            "title": "Novo passo",
+            "text": "Explique o passo."
+          }
+        },
+        {
+          "key": "divider",
+          "label": "Lua e estrelas acima do título",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Mostrar"
+            },
+            {
+              "value": "nao",
+              "label": "Esconder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "label": "Sobre (foto e texto)",
+      "group": "Conteúdo",
+      "description": "A pessoa por trás dos atendimentos: foto retrato, chamada, título, texto e link.",
+      "fields": [
+        {
+          "key": "image",
+          "label": "Foto",
+          "type": "image"
+        },
+        {
+          "key": "imageAlt",
+          "label": "Descrição da imagem",
+          "type": "text",
+          "optional": true,
+          "help": "Para leitores de tela e o Google: o que aparece na imagem."
+        },
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area"
+        },
+        {
+          "key": "button",
+          "label": "Texto do link",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link",
+          "label": "Link",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "side",
+          "label": "Foto",
+          "type": "select",
+          "options": [
+            {
+              "value": "esquerda",
+              "label": "À esquerda"
+            },
+            {
+              "value": "direita",
+              "label": "À direita"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "label": "Citação",
+      "group": "Conteúdo",
+      "description": "Uma frase em destaque numa faixa oliva, clara ou escura, com texto de apoio e botão opcionais.",
+      "fields": [
+        {
+          "key": "text",
+          "label": "Frase",
+          "type": "area"
+        },
+        {
+          "key": "note",
+          "label": "Texto de apoio",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "button",
+          "label": "Botão",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link",
+          "label": "Link do botão",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "tone",
+          "label": "Fundo",
+          "type": "select",
+          "options": [
+            {
+              "value": "oliva",
+              "label": "Oliva"
+            },
+            {
+              "value": "escuro",
+              "label": "Escuro"
+            },
+            {
+              "value": "claro",
+              "label": "Claro"
+            }
+          ]
+        },
+        {
+          "key": "ornaments",
+          "label": "Ramos e flores",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Com ramos e flores"
+            },
+            {
+              "value": "nao",
+              "label": "Sem ornamentos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "label": "Identidade da marca",
+      "group": "Conteúdo",
+      "description": "Faixa escura com o símbolo redondo e o texto que explica o seu significado.",
+      "fields": [
+        {
+          "key": "image",
+          "label": "Símbolo (imagem redonda)",
+          "type": "image"
+        },
+        {
+          "key": "imageAlt",
+          "label": "Descrição da imagem",
+          "type": "text",
+          "optional": true,
+          "help": "Para leitores de tela e o Google: o que aparece na imagem."
+        },
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area"
+        }
+      ]
+    },
+    {
+      "type": "services",
+      "label": "Cartões com símbolo",
+      "group": "Conteúdo",
+      "description": "Uma grade de cartões com símbolo, título, texto e link (serviços, valores...).",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "subtitle",
+          "label": "Texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "items",
+          "label": "Cartões",
+          "type": "items",
+          "min": 1,
+          "max": 9,
+          "itemTitle": "title",
+          "fields": [
+            {
+              "key": "icon",
+              "label": "Símbolo",
+              "type": "text",
+              "help": "Um caractere: ✦ ☾ ☉ ♡ ☆"
+            },
+            {
+              "key": "title",
+              "label": "Título",
+              "type": "text"
+            },
+            {
+              "key": "text",
+              "label": "Texto",
+              "type": "area"
+            },
+            {
+              "key": "linkLabel",
+              "label": "Texto do link",
+              "type": "text",
+              "optional": true
+            },
+            {
+              "key": "link",
+              "label": "Link",
+              "type": "text",
+              "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+            }
+          ],
+          "newItem": {
+            "icon": "✦",
+            "title": "Novo cartão",
+            "text": "Conte em poucas linhas.",
+            "linkLabel": "",
+            "link": "/loja"
+          }
+        },
+        {
+          "key": "note",
+          "label": "Frase de fechamento",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "divider",
+          "label": "Lua e estrelas acima do título",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Mostrar"
+            },
+            {
+              "value": "nao",
+              "label": "Esconder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "readings",
+      "label": "Leituras em detalhe",
+      "group": "Conteúdo",
+      "description": "Página longa com índice lateral fixo: texto de abertura com citação e um cartão por modalidade, cada um com âncora.",
+      "fields": [
+        {
+          "key": "indexTitle",
+          "label": "Título do índice",
+          "type": "text"
+        },
+        {
+          "key": "anchor",
+          "label": "Âncora da abertura",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "indexIntro",
+          "label": "Abertura no índice",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area"
+        },
+        {
+          "key": "quote",
+          "label": "Citação",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "text2",
+          "label": "Texto depois da citação",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "listTitle",
+          "label": "Título das modalidades",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "listText",
+          "label": "Texto das modalidades",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "items",
+          "label": "Modalidades",
+          "type": "items",
+          "min": 1,
+          "max": 10,
+          "itemTitle": "title",
+          "fields": [
+            {
+              "key": "anchor",
+              "label": "Âncora",
+              "type": "text",
+              "help": "Ex.: tiragens-tematicas, para o link /consultas#tiragens-tematicas."
+            },
+            {
+              "key": "tag",
+              "label": "Etiqueta",
+              "type": "text"
+            },
+            {
+              "key": "title",
+              "label": "Título",
+              "type": "text"
+            },
+            {
+              "key": "text",
+              "label": "Texto",
+              "type": "area"
+            },
+            {
+              "key": "list",
+              "label": "Lista (uma linha por item)",
+              "type": "area",
+              "optional": true,
+              "help": "Ex.: \"Amor: relacionamentos e vida afetiva.\" O que vem antes dos dois-pontos fica em negrito."
+            },
+            {
+              "key": "text2",
+              "label": "Texto depois da lista",
+              "type": "area",
+              "optional": true
+            }
+          ],
+          "newItem": {
+            "anchor": "nova-leitura",
+            "tag": "Nova",
+            "title": "Nova leitura",
+            "text": "Conte como é a leitura.",
+            "list": "",
+            "text2": ""
+          }
+        },
+        {
+          "key": "indexMore",
+          "label": "Mais links no índice",
+          "type": "items",
+          "min": 0,
+          "max": 8,
+          "itemTitle": "label",
+          "fields": [
+            {
+              "key": "label",
+              "label": "Texto",
+              "type": "text"
+            },
+            {
+              "key": "anchor",
+              "label": "Âncora",
+              "type": "text",
+              "help": "A âncora de outra seção da página."
+            }
+          ],
+          "newItem": {
+            "label": "Perguntas frequentes",
+            "anchor": "perguntas"
+          }
+        }
+      ]
+    },
+    {
+      "type": "features",
+      "label": "Destaques em caixas",
+      "group": "Conteúdo",
+      "description": "Título, até quatro caixas com título e texto (ex.: como você recebe) e um texto depois.",
+      "fields": [
+        {
+          "key": "anchor",
+          "label": "Âncora",
+          "type": "text",
+          "optional": true,
+          "help": "Um nome sem espaços (ex.: perguntas) para links como /consultas#perguntas."
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "items",
+          "label": "Caixas",
+          "type": "items",
+          "min": 1,
+          "max": 4,
+          "itemTitle": "title",
+          "fields": [
+            {
+              "key": "title",
+              "label": "Título",
+              "type": "text"
+            },
+            {
+              "key": "text",
+              "label": "Texto",
+              "type": "area"
+            }
+          ],
+          "newItem": {
+            "title": "Novo destaque",
+            "text": "Explique."
+          }
+        },
+        {
+          "key": "text",
+          "label": "Texto depois",
+          "type": "area",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "type": "live",
+      "label": "Atendimento ao vivo",
+      "group": "Conteúdo",
+      "description": "Bloco escuro com texto, um aviso em moldura dourada, botão e foto.",
+      "fields": [
+        {
+          "key": "anchor",
+          "label": "Âncora",
+          "type": "text",
+          "optional": true,
+          "help": "Um nome sem espaços (ex.: perguntas) para links como /consultas#perguntas."
+        },
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area"
+        },
+        {
+          "key": "noteTitle",
+          "label": "Aviso: destaque",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "note",
+          "label": "Aviso",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "button",
+          "label": "Botão",
+          "type": "text"
+        },
+        {
+          "key": "link",
+          "label": "Link do botão",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "image",
+          "label": "Foto",
+          "type": "image",
+          "optional": true
+        },
+        {
+          "key": "imageAlt",
+          "label": "Descrição da imagem",
+          "type": "text",
+          "optional": true,
+          "help": "Para leitores de tela e o Google: o que aparece na imagem."
+        }
+      ]
+    },
+    {
+      "type": "notice",
+      "label": "Aviso importante",
+      "group": "Conteúdo",
+      "description": "Um cuidado em moldura terracota (ex.: a leitura não substitui médico ou psicólogo).",
+      "fields": [
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "label": "Frase e foto",
+      "group": "Conteúdo",
+      "description": "Uma frase grande ao lado de uma foto em arco.",
+      "fields": [
+        {
+          "key": "text",
+          "label": "Frase",
+          "type": "area"
+        },
+        {
+          "key": "image",
+          "label": "Foto",
+          "type": "image"
+        },
+        {
+          "key": "button",
+          "label": "Botão",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link",
+          "label": "Link do botão",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "side",
+          "label": "Foto",
+          "type": "select",
+          "options": [
+            {
+              "value": "direita",
+              "label": "À direita"
+            },
+            {
+              "value": "esquerda",
+              "label": "À esquerda"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sessions",
+      "label": "Cartões com foto",
+      "group": "Conteúdo",
+      "description": "Dois ou três atendimentos com foto em arco, texto e link.",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "items",
+          "label": "Cartões",
+          "type": "items",
+          "min": 1,
+          "max": 3,
+          "itemTitle": "title",
+          "fields": [
+            {
+              "key": "image",
+              "label": "Foto",
+              "type": "image"
+            },
+            {
+              "key": "eyebrow",
+              "label": "Chamada pequena",
+              "type": "text"
+            },
+            {
+              "key": "title",
+              "label": "Título",
+              "type": "text"
+            },
+            {
+              "key": "text",
+              "label": "Texto",
+              "type": "area"
+            },
+            {
+              "key": "linkLabel",
+              "label": "Texto do link",
+              "type": "text"
+            },
+            {
+              "key": "link",
+              "label": "Link",
+              "type": "text",
+              "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+            }
+          ],
+          "newItem": {
+            "image": "/_template/img/cartas.svg",
+            "eyebrow": "Com horário marcado",
+            "title": "Novo atendimento",
+            "text": "Conte como é o atendimento.",
+            "linkLabel": "Ver valor e agendar",
+            "link": "/loja"
+          }
+        },
+        {
+          "key": "divider",
+          "label": "Lua e estrelas acima do título",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Mostrar"
+            },
+            {
+              "value": "nao",
+              "label": "Esconder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "label": "Trajetória",
+      "group": "Conteúdo",
+      "description": "Formação ou história em etapas, numa linha dourada.",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "items",
+          "label": "Etapas",
+          "type": "items",
+          "min": 1,
+          "max": 8,
+          "itemTitle": "title",
+          "fields": [
+            {
+              "key": "step",
+              "label": "Etiqueta",
+              "type": "text"
+            },
+            {
+              "key": "title",
+              "label": "Título",
+              "type": "text"
+            },
+            {
+              "key": "text",
+              "label": "Texto",
+              "type": "area"
+            }
+          ],
+          "newItem": {
+            "step": "Etapa",
+            "title": "Nova etapa",
+            "text": "O que aconteceu."
+          }
+        },
+        {
+          "key": "closing",
+          "label": "Frase de fechamento",
+          "type": "area",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "type": "testimonials",
+      "label": "Depoimentos",
+      "group": "Conteúdo",
+      "description": "O que dizem os clientes. Sem depoimentos, a seção não aparece no site.",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "items",
+          "label": "Depoimentos",
+          "type": "items",
+          "min": 0,
+          "max": 6,
+          "itemTitle": "name",
+          "fields": [
+            {
+              "key": "quote",
+              "label": "Depoimento",
+              "type": "area"
+            },
+            {
+              "key": "name",
+              "label": "Nome",
+              "type": "text"
+            },
+            {
+              "key": "detail",
+              "label": "Atendimento",
+              "type": "text"
+            }
+          ],
+          "newItem": {
+            "quote": "Escreva aqui o depoimento.",
+            "name": "Nome",
+            "detail": "Atendimento"
+          }
+        },
+        {
+          "key": "divider",
+          "label": "Lua e estrelas acima do título",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Mostrar"
+            },
+            {
+              "value": "nao",
+              "label": "Esconder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "label": "Perguntas frequentes",
+      "group": "Contato",
+      "description": "Perguntas e respostas que abrem e fecham, ao lado do título ou em coluna única.",
+      "fields": [
+        {
+          "key": "anchor",
+          "label": "Âncora",
+          "type": "text",
+          "optional": true,
+          "help": "Um nome sem espaços (ex.: perguntas) para links como /consultas#perguntas."
+        },
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "button",
+          "label": "Texto do link",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link",
+          "label": "Link",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "whatsapp",
+          "label": "Convite para o WhatsApp",
+          "type": "text",
+          "optional": true,
+          "help": "Só aparece se a loja divulgar o WhatsApp."
+        },
+        {
+          "key": "layout",
+          "label": "Formato",
+          "type": "select",
+          "options": [
+            {
+              "value": "lado",
+              "label": "Título ao lado"
+            },
+            {
+              "value": "coluna",
+              "label": "Coluna única"
+            }
+          ]
+        },
+        {
+          "key": "items",
+          "label": "Perguntas",
+          "type": "items",
+          "min": 1,
+          "max": 12,
+          "itemTitle": "q",
+          "fields": [
+            {
+              "key": "q",
+              "label": "Pergunta",
+              "type": "text"
+            },
+            {
+              "key": "a",
+              "label": "Resposta",
+              "type": "area"
+            }
+          ],
+          "newItem": {
+            "q": "Nova pergunta?",
+            "a": "A resposta."
+          }
+        }
+      ]
+    },
+    {
+      "type": "contact",
+      "label": "Contato",
+      "group": "Contato",
+      "description": "E-mail, Instagram e, se a loja divulgar, WhatsApp com assuntos prontos (dos Contatos do site da loja).",
+      "fields": [
+        {
+          "key": "eyebrow",
+          "label": "Chamada pequena",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area"
+        },
+        {
+          "key": "topics",
+          "label": "Assuntos do WhatsApp",
+          "type": "items",
+          "min": 0,
+          "max": 6,
+          "itemTitle": "label",
+          "fields": [
+            {
+              "key": "label",
+              "label": "Assunto",
+              "type": "text"
+            },
+            {
+              "key": "message",
+              "label": "Mensagem pronta",
+              "type": "text"
+            }
+          ],
+          "newItem": {
+            "label": "Novo assunto",
+            "message": "Olá! Vim pelo site."
+          }
+        },
+        {
+          "key": "hours",
+          "label": "Horário de atendimento",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "button",
+          "label": "Botão do WhatsApp",
+          "type": "text"
+        },
+        {
+          "key": "divider",
+          "label": "Lua e estrelas acima do título",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Mostrar"
+            },
+            {
+              "value": "nao",
+              "label": "Esconder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "label": "Chamada final",
+      "group": "Contato",
+      "description": "Faixa de fechamento escura (com ramos) ou clara: símbolo redondo opcional, título, texto, botões e um texto final.",
+      "fields": [
+        {
+          "key": "image",
+          "label": "Símbolo redondo",
+          "type": "image",
+          "optional": true
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "text",
+          "label": "Texto",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "button",
+          "label": "Botão principal",
+          "type": "text"
+        },
+        {
+          "key": "link",
+          "label": "Link do botão principal",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "button2",
+          "label": "Botão secundário",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "link2",
+          "label": "Link do botão secundário",
+          "type": "text",
+          "help": "Ex.: /loja, /sobre, /consultas#tema ou um endereço completo. Vazio: abre o WhatsApp da loja (se houver)."
+        },
+        {
+          "key": "footnote",
+          "label": "Texto final",
+          "type": "area",
+          "optional": true
+        },
+        {
+          "key": "tone",
+          "label": "Fundo",
+          "type": "select",
+          "options": [
+            {
+              "value": "escuro",
+              "label": "Escuro"
+            },
+            {
+              "value": "claro",
+              "label": "Claro"
+            }
+          ]
+        },
+        {
+          "key": "ornaments",
+          "label": "Ramos e flores",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Com ramos e flores"
+            },
+            {
+              "value": "nao",
+              "label": "Sem ornamentos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "Texto",
+      "group": "Conteúdo",
+      "description": "Título e parágrafos numa coluna de leitura.",
+      "fields": [
+        {
+          "key": "anchor",
+          "label": "Âncora",
+          "type": "text",
+          "optional": true,
+          "help": "Um nome sem espaços (ex.: perguntas) para links como /consultas#perguntas."
+        },
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "body",
+          "label": "Texto",
+          "type": "area"
+        }
+      ]
+    },
+    {
+      "type": "footer",
+      "label": "Rodapé",
+      "group": "Global",
+      "global": true,
+      "description": "Lua e estrelas, a marca, o menu e os contatos (Instagram, e-mail e WhatsApp dos Contatos do site). Aparece em todas as páginas.",
+      "fields": [
+        {
+          "key": "about",
+          "label": "Texto sobre a marca",
+          "type": "area"
+        },
+        {
+          "key": "navTitle",
+          "label": "Título do menu",
+          "type": "text"
+        },
+        {
+          "key": "contactTitle",
+          "label": "Título dos contatos",
+          "type": "text"
+        },
+        {
+          "key": "hours",
+          "label": "Horário de atendimento",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "note",
+          "label": "Linha final",
+          "type": "text",
+          "optional": true
+        },
+        {
+          "key": "ornaments",
+          "label": "Ramos e flores",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim",
+              "label": "Com ramos e flores"
+            },
+            {
+              "value": "nao",
+              "label": "Sem ornamentos"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sectionDefaults": {
+    "header": {
+      "logoImage": "",
+      "logo": "{empresa}",
+      "tagline": "Oráculos e bruxaria natural",
+      "shopLabel": "Loja",
+      "button": "Escolher minha leitura",
+      "link": "/loja"
+    },
+    "hero": {
+      "image": "/_template/img/lua.svg",
+      "imageAlt": "",
+      "imageStyle": "ilustracao",
+      "eyebrow": "Oráculos · Bruxaria natural",
+      "title": "Leituras com presença, respeito e clareza",
+      "subtitle": "Um espaço para olhar a sua vida por outro ângulo, receber aconselhamento espiritual e compreender o seu momento.",
+      "button": "Escolher minha leitura",
+      "link": "/loja",
+      "button2": "Como funcionam as consultas",
+      "link2": "/consultas",
+      "bullets": [
+        {
+          "label": "Entrega em até 48h"
+        },
+        {
+          "label": "Atendimento online"
+        },
+        {
+          "label": "Não precisa conhecer as cartas"
+        }
+      ],
+      "ornaments": "sim"
+    },
+    "intro": {
+      "image": "",
+      "imageAlt": "",
+      "eyebrow": "Sobre",
+      "title": "Título da página",
+      "lead": "Um texto curto que apresenta a página.",
+      "button": "",
+      "link": "/loja",
+      "button2": "",
+      "link2": "",
+      "ornaments": "sim"
+    },
+    "products": {
+      "eyebrow": "Leituras e produtos",
+      "title": "Escolha a sua leitura",
+      "subtitle": "",
+      "source": "todos",
+      "count": "3",
+      "layout": "grade",
+      "button": "Ver todas as leituras e produtos",
+      "divider": "sim"
+    },
+    "sample": {
+      "eyebrow": "Grátis",
+      "title": "Faça uma amostra grátis do seu mapa",
+      "button": "Fazer a minha amostra"
+    },
+    "modes": {
+      "eyebrow": "Escolha a sua leitura",
+      "title": "Cada pessoa chega ao oráculo por um motivo",
+      "subtitle": "Escolha a modalidade que combina com o que você procura.",
+      "items": [
+        {
+          "tag": "Por período",
+          "title": "Orientações do mês",
+          "text": "Tendências, alertas e aconselhamentos para o período escolhido.",
+          "linkLabel": "Saiba mais",
+          "link": "/consultas"
+        },
+        {
+          "tag": "Um tema a fundo",
+          "title": "Tiragens temáticas",
+          "text": "Um olhar profundo sobre amor, trabalho ou finanças.",
+          "linkLabel": "Saiba mais",
+          "link": "/consultas"
+        },
+        {
+          "tag": "Visão completa",
+          "title": "Panorama da vida",
+          "text": "As áreas importantes da sua vida numa só leitura.",
+          "linkLabel": "Saiba mais",
+          "link": "/consultas"
+        }
+      ],
+      "featuredTag": "Ao vivo",
+      "featuredTitle": "Consulta ao vivo",
+      "featuredText": "A leitura acontece em tempo real: você traz os seus temas, conversa e faz perguntas.",
+      "featuredLinkLabel": "Agendar meu horário",
+      "featuredLink": "/loja",
+      "divider": "sim"
+    },
+    "steps": {
+      "eyebrow": "Simples e no seu tempo",
+      "title": "Como funciona",
+      "subtitle": "",
+      "items": [
+        {
+          "title": "Escolha a leitura",
+          "text": "Uma tiragem enviada, com o tema que você quer olhar, ou uma consulta ao vivo."
+        },
+        {
+          "title": "Faça o pagamento",
+          "text": "Na consulta ao vivo, você também escolhe o dia e o horário."
+        },
+        {
+          "title": "Receba as mensagens",
+          "text": "Fotos das cartas e áudios explicativos, por e-mail e na sua conta."
+        }
+      ],
+      "divider": "sim"
+    },
+    "about": {
+      "image": "/_template/img/retrato.svg",
+      "imageAlt": "",
+      "eyebrow": "Quem sou",
+      "title": "Espiritualidade com os pés na vida real",
+      "text": "Conte aqui um pouco da sua história e do seu jeito de atender.",
+      "button": "Conheça a minha história",
+      "link": "/sobre",
+      "side": "esquerda"
+    },
+    "quote": {
+      "text": "“A espiritualidade aconselha e direciona; a decisão é sempre sua.”",
+      "note": "",
+      "button": "",
+      "link": "",
+      "tone": "oliva",
+      "ornaments": "sim"
+    },
+    "identity": {
+      "image": "/_template/img/lua.svg",
+      "imageAlt": "",
+      "eyebrow": "Nossa identidade",
+      "title": "O símbolo da marca",
+      "text": "Conte o que o símbolo da marca representa."
+    },
+    "services": {
+      "eyebrow": "O que ofereço",
+      "title": "Um espaço de presença e cuidado",
+      "subtitle": "",
+      "items": [
+        {
+          "icon": "✦",
+          "title": "Presença",
+          "text": "Cada leitura é um momento de escuta e atenção.",
+          "linkLabel": "",
+          "link": ""
+        },
+        {
+          "icon": "✦",
+          "title": "Respeito",
+          "text": "Ao tempo e à autonomia de cada pessoa.",
+          "linkLabel": "",
+          "link": ""
+        },
+        {
+          "icon": "✦",
+          "title": "Responsabilidade",
+          "text": "Sem promessas fáceis e sem atalhos.",
+          "linkLabel": "",
+          "link": ""
+        }
+      ],
+      "note": "",
+      "divider": "sim"
+    },
+    "readings": {
+      "indexTitle": "Nesta página",
+      "anchor": "o-que-revela",
+      "indexIntro": "O que o oráculo revela",
+      "title": "O que o oráculo pode revelar?",
+      "text": "Explique como o oráculo funciona e como você trabalha com ele.",
+      "quote": "",
+      "text2": "",
+      "listTitle": "Escolha a sua leitura",
+      "listText": "",
+      "items": [
+        {
+          "anchor": "leitura-1",
+          "tag": "Por período",
+          "title": "Orientações do mês",
+          "text": "Conte como é a leitura.",
+          "list": "",
+          "text2": ""
+        }
+      ],
+      "indexMore": [
+        {
+          "label": "Perguntas frequentes",
+          "anchor": "perguntas"
+        }
+      ]
+    },
+    "features": {
+      "anchor": "como-recebo",
+      "title": "Como você recebe",
+      "items": [
+        {
+          "title": "Fotos e áudios",
+          "text": "As cartas fotografadas e a interpretação em áudio."
+        },
+        {
+          "title": "Até 48 horas",
+          "text": "Depois da confirmação do pagamento."
+        },
+        {
+          "title": "E-mail e site",
+          "text": "Você recebe por e-mail e acessa na sua conta."
+        }
+      ],
+      "text": ""
+    },
+    "live": {
+      "anchor": "ao-vivo",
+      "eyebrow": "30 minutos ou 1 hora",
+      "title": "Consultas ao vivo",
+      "text": "Conte como é a consulta ao vivo e como agendar.",
+      "noteTitle": "Um cuidado antes da consulta:",
+      "note": "procure um ambiente tranquilo e com privacidade.",
+      "button": "Agendar consulta ao vivo",
+      "link": "/loja",
+      "image": "/_template/img/cartas.svg",
+      "imageAlt": ""
+    },
+    "notice": {
+      "title": "Um cuidado importante",
+      "text": "A leitura é um espaço de aconselhamento espiritual e não substitui uma consulta médica ou psicológica."
+    },
+    "split": {
+      "text": "Uma frase que resume o seu trabalho.",
+      "image": "/_template/img/cartas.svg",
+      "button": "Ver as leituras",
+      "link": "/loja",
+      "side": "direita"
+    },
+    "sessions": {
+      "eyebrow": "Atendimentos",
+      "title": "Escolha como quer ser atendida",
+      "items": [
+        {
+          "image": "/_template/img/cartas.svg",
+          "eyebrow": "Com horário marcado",
+          "title": "Consulta ao vivo",
+          "text": "Conte como é o atendimento.",
+          "linkLabel": "Ver valor e agendar",
+          "link": "/loja"
+        }
+      ],
+      "divider": "sim"
+    },
+    "timeline": {
+      "eyebrow": "Trajetória",
+      "title": "O caminho até aqui",
+      "text": "",
+      "items": [
+        {
+          "step": "Início",
+          "title": "O chamado",
+          "text": "Como tudo começou."
+        }
+      ],
+      "closing": ""
+    },
+    "testimonials": {
+      "eyebrow": "Depoimentos",
+      "title": "O que dizem as consulentes",
+      "items": [],
+      "divider": "sim"
+    },
+    "faq": {
+      "anchor": "perguntas",
+      "eyebrow": "Dúvidas",
+      "title": "Perguntas frequentes",
+      "text": "",
+      "button": "",
+      "link": "",
+      "whatsapp": "",
+      "layout": "lado",
+      "items": [
+        {
+          "q": "Preciso conhecer as cartas?",
+          "a": "Não. Tudo é explicado durante a leitura."
+        },
+        {
+          "q": "Qual é o prazo de entrega?",
+          "a": "Até 48 horas depois da confirmação do pagamento."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contato",
+      "title": "Fale comigo",
+      "text": "Escreva para tirar dúvidas sobre as leituras e os produtos.",
+      "topics": [],
+      "hours": "",
+      "button": "Conversar no WhatsApp",
+      "divider": "sim"
+    },
+    "cta": {
+      "image": "",
+      "title": "Reserve esse momento para você",
+      "text": "Escolha a leitura que faz sentido para este momento.",
+      "button": "Escolher minha leitura",
+      "link": "/loja",
+      "button2": "",
+      "link2": "",
+      "footnote": "",
+      "tone": "escuro",
+      "ornaments": "sim"
+    },
+    "text": {
+      "anchor": "",
+      "title": "Título",
+      "body": "Escreva aqui."
+    },
+    "footer": {
+      "about": "Leituras, conteúdos e produtos feitos com intenção, respeito e cuidado.",
+      "navTitle": "Navegue",
+      "contactTitle": "Fale comigo",
+      "hours": "",
+      "note": "A leitura é aconselhamento espiritual e não substitui atendimento médico ou psicológico.",
+      "ornaments": "sim"
+    }
+  },
+  "defaults": {
+    "theme": {
+      "palette": "floresta",
+      "fonts": "classica",
+      "chartName": "mapa-astral"
+    },
+    "pages": [
+      {
+        "title": "Início",
+        "slug": "/",
+        "menu": false,
+        "seoTitle": "",
+        "seoDescription": "",
+        "sections": [
+          "hero",
+          "modes",
+          "steps",
+          "products",
+          "about",
+          "quote",
+          {
+            "type": "faq",
+            "props": {
+              "button": "Todas as perguntas",
+              "link": "/consultas#perguntas"
+            }
+          },
+          "cta"
+        ]
+      },
+      {
+        "title": "Consultas",
+        "slug": "/consultas",
+        "menu": true,
+        "seoTitle": "",
+        "seoDescription": "",
+        "sections": [
+          {
+            "type": "intro",
+            "props": {
+              "eyebrow": "Sobre as consultas",
+              "title": "Consultas e leituras",
+              "button": "Escolher minha leitura"
+            }
+          },
+          "readings",
+          "features",
+          "live",
+          "notice",
+          {
+            "type": "faq",
+            "props": {
+              "layout": "coluna"
+            }
+          },
+          {
+            "type": "cta",
+            "props": {
+              "tone": "claro",
+              "title": "Encontre a leitura que faz sentido para este momento",
+              "button": "Ver as leituras disponíveis"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Sobre",
+        "slug": "/sobre",
+        "menu": true,
+        "seoTitle": "",
+        "seoDescription": "",
+        "sections": [
+          {
+            "type": "intro",
+            "props": {
+              "image": "/_template/img/retrato.svg",
+              "eyebrow": "Sobre mim",
+              "title": "Espiritualidade com os pés na vida real"
+            }
+          },
+          "text",
+          "identity",
+          "services",
+          {
+            "type": "cta",
+            "props": {
+              "tone": "claro",
+              "title": "“Que o seu caminho encontre um lugar de silêncio e alguma luz.”",
+              "text": "",
+              "button": "Conhecer as consultas",
+              "link": "/consultas",
+              "button2": "Ir para a loja",
+              "link2": "/loja"
+            }
+          }
+        ]
+      },
+      {
+        "title": "Contato",
+        "slug": "/contato",
+        "menu": true,
+        "seoTitle": "",
+        "seoDescription": "",
+        "sections": [
+          "contact",
+          "cta"
+        ]
+      }
+    ],
+    "newPage": [
+      "intro",
+      "text",
+      "cta"
+    ]
+  },
+  "variableKeys": [
+    "empresa",
+    "whatsapp",
+    "telefone",
+    "email",
+    "endereco",
+    "registro",
+    "instagram"
+  ],
+  "variables": "Os textos aceitam {empresa}, {whatsapp}, {telefone}, {email}, {endereco}, {registro} e {instagram}: o site mostra os contatos de Loja › Dados da loja › Contatos do site."
+}
