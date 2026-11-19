@@ -1,8 +1,9 @@
 {
   "id": "template-holistico-0003",
   "name": "Holístico 0003 · Floresta",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Verde profundo texturizado, ramos de folhas e flores em dourado, lua e estrelas, ilustração na abertura. Para baralho cigano, tarot e bruxaria natural.",
+  "cover": "preview.png",
   "modules": [
     "sales:CreateProduct"
   ],
@@ -133,6 +134,9 @@
       "group": "Global",
       "global": true,
       "description": "Símbolo, nome, menu, conta e sacola, numa faixa escura fixa no topo. Aparece em todas as páginas.",
+      "skeleton": [
+        "@dark nav"
+      ],
       "fields": [
         {
           "key": "logoImage",
@@ -177,6 +181,9 @@
       "label": "Abertura com arte",
       "group": "Topo",
       "description": "A primeira dobra, escura e texturizada: chamada, título grande, texto, dois botões, destaques e a arte ao lado.",
+      "skeleton": [
+        "@dark eyebrow title:lg text:2 buttons items:3 | image:tall"
+      ],
       "fields": [
         {
           "key": "image",
@@ -284,6 +291,9 @@
       "label": "Topo de página",
       "group": "Topo",
       "description": "Topo escuro das páginas internas: o caminho (Início / Página), chamada, título, texto, botões e foto em arco opcional.",
+      "skeleton": [
+        "@dark text:1 eyebrow title text:2 | image"
+      ],
       "fields": [
         {
           "key": "image",
@@ -360,6 +370,10 @@
       "label": "Vitrine da loja",
       "group": "Loja",
       "description": "Os produtos à venda na loja: sessões, mapas, produtos físicos ou assinaturas.",
+      "skeleton": [
+        "@center eyebrow title",
+        "products:4"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -470,6 +484,9 @@
       "label": "Amostra grátis do mapa",
       "group": "Loja",
       "description": "Convite para a amostra grátis do mapa (com o nome escolhido em Aparência). Só aparece quando a loja oferece a amostra.",
+      "skeleton": [
+        "@soft @center eyebrow title button"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -493,6 +510,10 @@
       "label": "Modalidades",
       "group": "Conteúdo",
       "description": "Cartões com etiqueta, título, resumo e link, e um cartão escuro em destaque no fim.",
+      "skeleton": [
+        "@center eyebrow title text:1",
+        "cards:3"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -606,6 +627,10 @@
       "label": "Como funciona",
       "group": "Conteúdo",
       "description": "Passos numerados em círculos dourados.",
+      "skeleton": [
+        "@center eyebrow title",
+        "steps:4"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -669,6 +694,9 @@
       "label": "Sobre (foto e texto)",
       "group": "Conteúdo",
       "description": "A pessoa por trás dos atendimentos: foto retrato, chamada, título, texto e link.",
+      "skeleton": [
+        "image:tall | eyebrow title text button"
+      ],
       "fields": [
         {
           "key": "image",
@@ -731,6 +759,9 @@
       "label": "Citação",
       "group": "Conteúdo",
       "description": "Uma frase em destaque numa faixa oliva, clara ou escura, com texto de apoio e botão opcionais.",
+      "skeleton": [
+        "@soft @center quote button"
+      ],
       "fields": [
         {
           "key": "text",
@@ -796,6 +827,9 @@
       "label": "Identidade da marca",
       "group": "Conteúdo",
       "description": "Faixa escura com o símbolo redondo e o texto que explica o seu significado.",
+      "skeleton": [
+        "@dark image | eyebrow title text"
+      ],
       "fields": [
         {
           "key": "image",
@@ -831,6 +865,10 @@
       "label": "Cartões com símbolo",
       "group": "Conteúdo",
       "description": "Uma grade de cartões com símbolo, título, texto e link (serviços, valores...).",
+      "skeleton": [
+        "@center eyebrow title text:1",
+        "icons:3"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -921,6 +959,9 @@
       "label": "Leituras em detalhe",
       "group": "Conteúdo",
       "description": "Página longa com índice lateral fixo: texto de abertura com citação e um cartão por modalidade, cada um com âncora.",
+      "skeleton": [
+        "links:1 | title text quote text items:3"
+      ],
       "fields": [
         {
           "key": "indexTitle",
@@ -1057,6 +1098,11 @@
       "label": "Destaques em caixas",
       "group": "Conteúdo",
       "description": "Título, até quatro caixas com título e texto (ex.: como você recebe) e um texto depois.",
+      "skeleton": [
+        "@center title",
+        "icons:4",
+        "@center text:2"
+      ],
       "fields": [
         {
           "key": "anchor",
@@ -1107,6 +1153,9 @@
       "label": "Atendimento ao vivo",
       "group": "Conteúdo",
       "description": "Bloco escuro com texto, um aviso em moldura dourada, botão e foto.",
+      "skeleton": [
+        "@dark eyebrow title text quote button | image:tall"
+      ],
       "fields": [
         {
           "key": "anchor",
@@ -1173,6 +1222,9 @@
       "label": "Aviso importante",
       "group": "Conteúdo",
       "description": "Um cuidado em moldura terracota (ex.: a leitura não substitui médico ou psicólogo).",
+      "skeleton": [
+        "@soft @center title text:2"
+      ],
       "fields": [
         {
           "key": "title",
@@ -1191,6 +1243,9 @@
       "label": "Frase e foto",
       "group": "Conteúdo",
       "description": "Uma frase grande ao lado de uma foto em arco.",
+      "skeleton": [
+        "title:lg button | image:tall"
+      ],
       "fields": [
         {
           "key": "text",
@@ -1236,6 +1291,10 @@
       "label": "Cartões com foto",
       "group": "Conteúdo",
       "description": "Dois ou três atendimentos com foto em arco, texto e link.",
+      "skeleton": [
+        "@center eyebrow title",
+        "cards:3"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -1318,6 +1377,10 @@
       "label": "Trajetória",
       "group": "Conteúdo",
       "description": "Formação ou história em etapas, numa linha dourada.",
+      "skeleton": [
+        "@center eyebrow title text:2",
+        "steps:4"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -1378,6 +1441,10 @@
       "label": "Depoimentos",
       "group": "Conteúdo",
       "description": "O que dizem os clientes. Sem depoimentos, a seção não aparece no site.",
+      "skeleton": [
+        "@center eyebrow title",
+        "quotes:3"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -1441,6 +1508,9 @@
       "label": "Perguntas frequentes",
       "group": "Contato",
       "description": "Perguntas e respostas que abrem e fecham, ao lado do título ou em coluna única.",
+      "skeleton": [
+        "eyebrow title text button | faq:4"
+      ],
       "fields": [
         {
           "key": "anchor",
@@ -1530,6 +1600,9 @@
       "label": "Contato",
       "group": "Contato",
       "description": "E-mail, Instagram e, se a loja divulgar, WhatsApp com assuntos prontos (dos Contatos do site da loja).",
+      "skeleton": [
+        "eyebrow title text chips:3 | form"
+      ],
       "fields": [
         {
           "key": "eyebrow",
@@ -1603,6 +1676,9 @@
       "label": "Chamada final",
       "group": "Contato",
       "description": "Faixa de fechamento escura (com ramos) ou clara: símbolo redondo opcional, título, texto, botões e um texto final.",
+      "skeleton": [
+        "@dark @center title text buttons"
+      ],
       "fields": [
         {
           "key": "image",
@@ -1687,6 +1763,9 @@
       "label": "Texto",
       "group": "Conteúdo",
       "description": "Título e parágrafos numa coluna de leitura.",
+      "skeleton": [
+        "@center title text:6"
+      ],
       "fields": [
         {
           "key": "anchor",
@@ -1714,6 +1793,10 @@
       "group": "Global",
       "global": true,
       "description": "Lua e estrelas, a marca, o menu e os contatos (Instagram, e-mail e WhatsApp dos Contatos do site). Aparece em todas as páginas.",
+      "skeleton": [
+        "@dark @center text:2",
+        "@dark links:2"
+      ],
       "fields": [
         {
           "key": "about",
