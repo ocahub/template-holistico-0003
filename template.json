@@ -4,6 +4,7 @@
   "version": "1.1.0",
   "description": "Verde profundo texturizado, ramos de folhas e flores em dourado, lua e estrelas, ilustração na abertura. Para baralho cigano, tarot e bruxaria natural.",
   "cover": "preview.png",
+  "screenshot": "preview-full.jpg",
   "modules": [
     "sales:CreateProduct"
   ],
