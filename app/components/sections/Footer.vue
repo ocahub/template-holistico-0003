@@ -62,5 +62,6 @@ const insta = computed(() => (v.value.instagram ?? '').replace('@', ''))
         <RhText v-if="p.note || editing" tag="p" path="note" :value="p.note" ph="Linha final" />
       </div>
     </div>
+    <div style="text-align:center;padding:10px 16px;font-size:.8rem;opacity:.85"><RhCookiePreferences /></div>
   </footer>
 </template>
